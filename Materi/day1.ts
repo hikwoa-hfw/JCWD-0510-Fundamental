@@ -16,7 +16,7 @@ console.log(nama.replaceAll("i", "o"));
 console.log(nama.split(" "));
 console.log(nama.concat(nama2));
 console.log(nama.concat(nama2).concat(nama3));
-console.log(nama.slice(0,3));
+console.log(nama.slice());
 
 
 

@@ -79,4 +79,3 @@ for (let i = 1; i < deretFibo; i++) {
 }
 console.log(nilaiBaru);
 
-console.log(a);

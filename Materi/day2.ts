@@ -138,8 +138,8 @@ while (i < 5) {
 /* do while loop
 sama spt while loop 
 pertama dia do lalu dilakukan pengecekan
-klo do while loop dicek dulu di awal
-while loop pengecekkan diakhir */
+klo while loop dicek dulu di awal
+do while loop pengecekkan diakhir */
 
 let count: number = 1;
 
