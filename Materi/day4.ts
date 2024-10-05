@@ -263,9 +263,3 @@ console.log(fruits1);
 const points: number[]= [3, 5, 1, 9, 8, 200]
 points.sort((a, b)=> a-b);
 console.log(points);
-
-
-
-
-
-
