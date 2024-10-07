@@ -109,7 +109,7 @@ greeting();
 function greetin2(name: string) {
   const hello2 = "hello";
   console.log(hello2);
-  return hello2 + " " + name;
+  return hello2 + "  " + name;
 }
 
 console.log(greetin2("wahyu"));
@@ -131,9 +131,10 @@ function myFunc(a: number, b: number, ...manyMoreArgs: number[]) {
   console.log(a);
   console.log(b);
   console.log(manyMoreArgs);
+  return manyMoreArgs
 }
 
-myFunc(1, 2, 3, 4, 4, 5, 6, 7, 8);
+console.log(myFunc(1, 2, 3, 4, 4, 5, 6, 7, 8));
 
 // Nested Func
 // fungsi yang berada dalam fungsi
@@ -202,64 +203,154 @@ const square4 = (number: number) => number * number;
 
 // Array build in method
 // JOin = menggabungkan value dalam arraay menjadi dalam bentuk string
-const words: string[] = ["hello", "world"]
+const words: string[] = ["hello", "world"];
 console.log(words.join(" "));
 
 // Pop = menghilangkan isi value paling akhir dalam array
-const words1: string[] = ["hello", "wello", "hello"]
-words1.pop()
+const words1: string[] = ["hello", "wello", "hello"];
+words1.pop();
 console.log(words1);
 // kalo pop di console log maka log akan menampilkan value yang hilang trsb
 console.log(words1.pop());
 
 // shift = menghilangkan value paling depan dalam array
-const words2: string[] = ["test", "hello", "world"]
-words2.shift()
+const words2: string[] = ["test", "hello", "world"];
+words2.shift();
 console.log(words2);
 console.log(words2.shift());
 
 // Push = menambahkan value ke dalam array terakhir
-const words3: string[] = ["hello", "world"]
-words3.push("purwadhika")
+const words3: string[] = ["hello", "world"];
+words3.push("purwadhika");
 console.log(words3);
 
 // Unshift = menambahkan value ke urutan paling dpn array
-const words4: string[] = ["hello", "wello"]
-words4.unshift("oi")
+const words4: string[] = ["hello", "wello"];
+words4.unshift("oi");
 console.log(words4);
 
 //  concat = menggabungkan array menjadi satu array
-const arr5: string[] = ["hey"]
-const arr6: string[] = ["koooo"]
-const arr7: string[] = ["hello", 'world']
+const arr5: string[] = ["hey"];
+const arr6: string[] = ["koooo"];
+const arr7: string[] = ["hello", "world"];
 
 console.log(arr5.concat(arr6));
 console.log(arr5.concat(arr6).concat(arr7));
 // another option
-const mergeArr = [...arr5, ...arr6, ...arr7]
+const mergeArr = [...arr5, ...arr6, ...arr7];
 console.log(mergeArr);
 //... akan mengcopy seluruh isi array target dan dimasukkan ke dalam value
 
 // Splice = menghapus, mengganti, attau menghapus value pada sebuah array
 // rumus = splice(startIndex, brpYgMauDiDelete, item)
 
-const months: string[] = ["jan", "march", "april", "june"]
-months.splice(1, 0, "feb")
+const months: string[] = ["jan", "march", "april", "june"];
+months.splice(1, 0, "feb");
 console.log(months);
 
-months.splice(4,1)
+months.splice(4, 1);
 console.log(months);
 
-months.splice(3, 1, "may")
+months.splice(3, 1, "may");
 console.log(months);
 
+//  Slice = mereturn array dengan value yang sudah ditentukan index start dan index end dari array tsb
+// rumus = slice(startIndex, endIndex)
+
+const fruit1: string[] = ["Mango", "Apple", "Banana", "Orange", "Lemon"];
+console.log(fruit1.slice(1, 4));
+console.log(fruit1.slice(-4, -1));
+// 1 , 4 tidak diambil jadi yang diambil hanya setelah 1 dan sebelum 4
+// -4, -1 sama aja karena hanya membalik urutannya
+
+// Indexof = mencari index dari value yang kita search
+// kalau tidak ditemukan akan memberi return -1
+// rumus = .indexOf()
+
+const fruits2: string[] = ["Mango", "Apple", "Banana", "Orange", "Lemon"];
+console.log(fruits2.indexOf("Lemon")); //case sensitive karena string
 
 // Sort = mengurutkan isi array berupa string atau number
 // versi string
-const fruits1: string[] = ["Mango", "Apple", "Banana", "Orange", "Lemon"]
-fruits1.sort()
+const fruits1: string[] = ["Mango", "Apple", "Banana", "Orange", "Lemon"];
+fruits1.sort();
 console.log(fruits1);
-// Number tanpa compare function
-const points: number[]= [3, 5, 1, 9, 8, 200]
-points.sort((a, b)=> a-b);
+// Number compare function
+const points: number[] = [3, 5, 1, 9, 8, 200];
+points.sort((a, b) => a - b); //ascending (kecil ke besar)
+// ponts.sort((a,b) => b-a); descending
 console.log(points);
+
+// number tanpa compare function
+points.sort();
+console.log(points);
+
+// Reverse = membalikkan urutan dalam array
+points.reverse();
+console.log(points);
+
+// Foreach = melakukan looping pada array tapi tidak mereturn apapun
+// dalam foreach harus dimasukkan function lagi
+//
+
+const fruits3: string[] = ["Mango", "Apple", "Banana", "Orange", "Lemon"];
+
+fruits3.forEach((fruit, index) => {
+  console.log(fruit);
+  console.log(index);
+});
+// akan melakukan looping disetiap value of array
+// hanya melakukan looping tanpa memberikan return > reminder dari aplikasi
+
+// MAP = sama spt forEach tapi mereturn array baru (paling sering digunakan)
+//
+
+const fruits4: string[] = ["Mango", "Apple", "Banana", "Orange", "Lemon"];
+
+const result5 = fruits4.map((fruit, index) => {
+  return index;
+});
+console.log(result5);
+// const result5 = fruits4.map((index) fruit dihapus karena belum dipakai dalam
+// fungsinya
+
+// Filter = melakukan looping seperti map dan menghasilkan array baru berdasarkan
+// kondisi pada return func
+
+const ages: number[] = [31, 2, 29, 30, 40, 50];
+const result6 = ages.filter((age) => {
+  return age > 29;
+});
+
+console.log(result6);
+
+// FIND = mencari value yang ditemukan pertama kali dalam array
+const ages2: number[] = [3, 15, 29, 30, 15, 50];
+const result9 = ages2.find((age) => age > 14);
+console.log(result9);
+
+//  yang ditemukan pertama itu yang akan direturn
+
+// FindIndex = seperti index tapi yang dihasilkan adalah indexnya
+const ages3: number[] = [3, 15, 29, 30, 15, 50];
+const result10 = ages3.findIndex((age) => age > 14)
+console.log(result10);
+//  yang dihasilkan cuma angka 1 karena angka pertama yang ditemukan berada di index
+// ke-1
+
+
+// Reduce = biasa digunakan untuk operasi aritmatika pada tiap isi array
+
+const number1: number[] = [175, 50, 25]
+const result11 =  number1.reduce((a, b) => a+b)
+console.log(result11);
+// salalu nambahin semua value dalam array
+
+//  Includes = mengecek value pada array ada atau tidak
+// hasil returnnya adalah boolean
+
+const fruits5: string[] = ["Mango", "Apple", "Banana", "Orange", "Lemon"];
+console.log(fruits5.includes("Mango"))
+console.log(fruits5.includes("mango"))
+
+// case sensitive
