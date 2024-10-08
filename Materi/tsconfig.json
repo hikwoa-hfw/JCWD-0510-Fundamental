@@ -1,5 +1,7 @@
 {
     "compilerOptions": {
-        "target": "ES2021"
+        "outDir": "dist",
+        "target": "ES2021",
+        "moduleDetection": "force"
     }
 }

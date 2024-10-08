@@ -201,7 +201,7 @@ const sqare3 = (number: number) => {
 const square4 = (number: number) => number * number;
 // kalau 1 line gaperlu pakai kurawal dan ga perlu return
 
-// Array build in method
+// Array built in method
 // JOin = menggabungkan value dalam arraay menjadi dalam bentuk string
 const words: string[] = ["hello", "world"];
 console.log(words.join(" "));

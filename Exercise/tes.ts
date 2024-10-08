@@ -47,3 +47,13 @@ console.log(fizzzz(6));
 // segitiga(4).forEach((n)=> {
 //     console.log(n);
 // })
+
+function unikArr(input: number[], input2: number[]){
+  let tempArr: number[]=[]
+  const hasill = input.map((x,index) => {
+    input.includes((x[index])) !== input2.includes((x[index]))
+    return x[index]
+  })
+  return hasill
+}
+console.log(unikArr([1, 2, 3, 4, 5], [3, 4, 5, 6, 7]));
