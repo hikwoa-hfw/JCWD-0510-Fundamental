@@ -120,17 +120,17 @@ console.log(combine2Arr([1, 2, 3], [4, 5, 6]));
 // 9 belum
 
 function unique2(input: number[]) {
-  const unik: number[] = [];
-  for (let i = 0; i <= input.length; i++) {
-    if (input.indexOf(input[i]) !== input.lastIndexOf(input[i])) {
-      if (unik.indexOf(input[i]) == -1) unik.push(input[i]);
+    const unik: number[] = [];
+    for (let i = 0; i <= input.length; i++) {
+      if (input.indexOf(input[i]) !== input.lastIndexOf(input[i])) {
+        if (unik.indexOf(input[i]) == -1) unik.push(input[i]);
+      }
     }
-  }
-  console.log(unik);
-  return unik;
+    console.log(unik);
+    return unik;
 }
 console.log(unique2([1, 2, 2, 2, 3, 3, 4, 5, 5]));
-console.log([1, 2, 2, 2, 3, 3, 4, 5, 5].indexOf(3));
+
 
 // 10
 

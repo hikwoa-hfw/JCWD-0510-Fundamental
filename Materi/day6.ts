@@ -143,6 +143,7 @@ person5.greet();
 // class
 //  adalah cetakan/template untuk membuat objek
 // penamaan menggunakan Pascalcase
+// new untuk membuat instance baru
 
 // class declaration
 class User1 {
@@ -281,7 +282,7 @@ class Book extends Product {
   }
 }
 
-const buku = new Book("abc", 10_000, "aceng")
+const buku = new Book("abc", 10_000, "aceng" )
 
 console.log(buku.productName);
 console.log(buku.price);

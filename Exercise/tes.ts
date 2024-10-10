@@ -48,12 +48,25 @@ console.log(fizzzz(6));
 //     console.log(n);
 // })
 
-function unikArr(input: number[], input2: number[]){
-  let tempArr: number[]=[]
-  const hasill = input.map((x,index) => {
-    input.includes((x[index])) !== input2.includes((x[index]))
-    return x[index]
-  })
-  return hasill
+function unikArr(input: number[], input2: number[]) {
+  let tempArr: number[] = [];
+  const hasill = input.map((x, index) => {
+    input.includes(x[index]) !== input2.includes(x[index]);
+    return x[index];
+  });
+  return hasill;
 }
 console.log(unikArr([1, 2, 3, 4, 5], [3, 4, 5, 6, 7]));
+
+function singleNumber(nums: number[]) {
+  let unik: number[] = [];
+  for (let i = 0; i < nums.length; i++) {
+    if (nums.indexOf(nums[i]) === nums.lastIndexOf(nums[i])) {
+      unik.push(nums[i]);
+    }
+  }
+  console.log(unik);
+  return unik[0];
+}
+
+console.log(singleNumber([2, 2, 1]));
