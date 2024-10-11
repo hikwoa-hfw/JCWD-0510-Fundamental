@@ -68,5 +68,6 @@ function singleNumber(nums: number[]) {
   console.log(unik);
   return unik[0];
 }
-
-console.log(singleNumber([2, 2, 1]));
+function mySqrt(x: number): number {
+  return Math.sqrt(x)  
+};

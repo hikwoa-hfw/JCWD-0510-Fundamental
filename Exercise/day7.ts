@@ -83,8 +83,7 @@ function switchValue(input: {}[]) {
   for (let i = 0; i < key.length; i++) {
     result[value[i]] = key[i];
     console.log(result);
-    resultFix[value[i]] = key[i]
-    console.log(resultFix);
+   
     
   }
 
