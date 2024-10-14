@@ -87,25 +87,25 @@ console.log(segitiga3(5));
 // buzz / 5 == 0
 // fizzbuzz == /3 && ==/5
 
-const fizzBuzzs2 = (fizzbuzz: number) => {
-  let variableReturn: (string | number)[] = [];
-  for (let i = 1; i <= fizzbuzz; i++) {
-    if (i % 3 == 0 && i % 5 == 0) {
-      variableReturn.push("FizzBuzz");
-    } else if (i % 3 == 0) {
-      variableReturn.push("Fizz");
-    } else if (i % 5 == 0) {
-      variableReturn.push("Buzz");
-    } else {
-      variableReturn.push(i);
-    }
-    console.log(variableReturn);
-  }
-  return variableReturn;
-};
+// const fizzBuzzs2 = (fizzbuzz: number) => {
+//   let variableReturn: (string | number)[] = [];
+//   for (let i = 1; i <= fizzbuzz; i++) {
+//     if (i % 3 == 0 && i % 5 == 0) {
+//       variableReturn.push("FizzBuzz");
+//     } else if (i % 3 == 0) {
+//       variableReturn.push("Fizz");
+//     } else if (i % 5 == 0) {
+//       variableReturn.push("Buzz");
+//     } else {
+//       variableReturn.push(i).toString().split("");
+//     }
+//     console.log(variableReturn);
+//   }
+//   return variableReturn.toString();
+// };
 
-fizzBuzzs2(15);
-console.log(fizzBuzzs2(15));
+// fizzBuzzs2([15]);
+// console.log(fizzBuzzs2(15));
 
 // const fizzBuzzs2 = (nPut: number[]) => {
 //   for (let i = 1; i <= nPut.length; i++) {

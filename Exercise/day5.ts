@@ -87,6 +87,7 @@ function mixArr(arrAny: any[]) {
   let sum: number = 0;
   arrAny.forEach((n, i) => {
     if (typeof n === "number") {
+
       sum += n;
     }
   });
@@ -184,7 +185,10 @@ function unique3(input: number[]) {
   for (let i = 0; i <= input.length; i++) {
     if (input.indexOf(input[i]) !== input.lastIndexOf(input[i])) {
       unik.push(input[i]);
+    console.log(unik);
+    
     }
+
   }
   return unik.reduce((a, b) => a + b);
 }
