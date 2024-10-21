@@ -241,7 +241,7 @@ const mergeArr = [...arr5, ...arr6, ...arr7];
 console.log(mergeArr);
 //... akan mengcopy seluruh isi array target dan dimasukkan ke dalam value
 
-// Splice = menghapus, mengganti, attau menghapus value pada sebuah array
+// Splice = menghapus, mengganti, attau menamba value pada sebuah array
 // rumus = splice(startIndex, brpYgMauDiDelete, item)
 
 const months: string[] = ["jan", "march", "april", "june"];
